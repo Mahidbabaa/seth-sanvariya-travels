@@ -1,0 +1,2627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seth Sanvariya Tour And Travels | Shujalpur Mandi, Madhya Pradesh</title>
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & SYSTEM RESET
+       ========================================================================== */
+    :root {
+      --navy-950: #080d19;
+      --navy-900: #0f172a;
+      --navy-800: #1e293b;
+      --navy-700: #334155;
+      --gold-600: #b45309;
+      --gold-500: #d97706;
+      --gold-400: #f59e0b;
+      --gold-100: #fef3c7;
+      --gold-50: #fffbeb;
+      --bg-page: #f8fafc;
+      --white: #ffffff;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --wa-green: #25d366;
+      --wa-dark: #128c7e;
+      --wa-teal: #075e54;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 22px 44px -10px rgba(15, 23, 42, 0.14);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--navy-800);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      color: var(--navy-900);
+      line-height: 1.24;
+      letter-spacing: -0.015em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       2. PURE-CSS 5-PAGE STATE CONTROLLER & MOBILE NAV (ZERO JAVASCRIPT)
+       ========================================================================== */
+    .page-radio,
+    .modal-toggle {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .page-section {
+      display: none;
+      animation: pageReveal 0.3s ease forwards;
+    }
+
+    @keyframes pageReveal {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #page-home:checked ~ .site-wrapper #view-home,
+    #page-fleet:checked ~ .site-wrapper #view-fleet,
+    #page-packages:checked ~ .site-wrapper #view-packages,
+    #page-services:checked ~ .site-wrapper #view-services,
+    #page-contact:checked ~ .site-wrapper #view-contact {
+      display: block;
+    }
+
+    #page-home:checked ~ .site-wrapper .nav-tab[for="page-home"],
+    #page-fleet:checked ~ .site-wrapper .nav-tab[for="page-fleet"],
+    #page-packages:checked ~ .site-wrapper .nav-tab[for="page-packages"],
+    #page-services:checked ~ .site-wrapper .nav-tab[for="page-services"],
+    #page-contact:checked ~ .site-wrapper .nav-tab[for="page-contact"] {
+      background-color: var(--navy-900);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+    }
+
+    /* ==========================================================================
+       3. TOP BLESSING BAR & STICKY EXECUTIVE HEADER
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--navy-950);
+      color: var(--slate-200);
+      font-size: 0.82rem;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .blessing-text {
+      color: var(--gold-400);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .top-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--slate-300);
+    }
+
+    .top-phone {
+      color: var(--white);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .top-phone:hover {
+      color: var(--gold-400);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 950;
+      background-color: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--slate-200);
+      box-shadow: 0 2px 14px rgba(15, 23, 42, 0.04);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .brand-emblem {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+      border: 1.5px solid var(--gold-500);
+      color: var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.24rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-600);
+    }
+
+    .hamburger-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--slate-300);
+      background-color: var(--white);
+      color: var(--navy-900);
+      cursor: pointer;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy-700);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .nav-tab:hover {
+      background-color: var(--slate-100);
+      color: var(--navy-900);
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       4. BUTTONS, SECTION HEADINGS & LAYOUT HELPERS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-align: center;
+      line-height: 1.2;
+      user-select: none;
+    }
+
+    .btn-sm {
+      padding: 8px 14px;
+      font-size: 0.83rem;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.28);
+    }
+
+    .btn-gold:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-navy {
+      background-color: var(--navy-900);
+      color: var(--white);
+    }
+
+    .btn-navy:hover {
+      background-color: var(--navy-800);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: var(--white);
+      border-color: var(--slate-300);
+      color: var(--navy-900);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--navy-900);
+      background-color: var(--slate-100);
+    }
+
+    .btn-glass {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.28);
+      color: var(--white);
+    }
+
+    .btn-glass:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-wa {
+      background: linear-gradient(135deg, var(--wa-green), #16a34a);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    }
+
+    .btn-wa:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .section-block {
+      padding: 72px 0;
+    }
+
+    .section-white {
+      background-color: var(--white);
+      border-top: 1px solid var(--slate-200);
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
+      background-color: var(--gold-50);
+      border: 1px solid var(--gold-100);
+      color: var(--gold-600);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: 2.05rem;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--slate-600);
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION & TRUST PILLARS
+       ========================================================================== */
+    .hero-section {
+      /* EDIT HERO BACKGROUND IMAGE: Apni photo lagane ke liye neeche wali line mein images/hero-bg.jpg ka path rakhein */
+      background:
+        radial-gradient(circle at 82% 20%, rgba(217, 119, 6, 0.16), transparent 46%),
+        linear-gradient(135deg, rgba(8, 13, 25, 0.94) 0%, rgba(15, 23, 42, 0.92) 56%, rgba(30, 41, 59, 0.92) 100%),
+        url('images/hero-bg.jpg') center/cover no-repeat;
+      color: var(--white);
+      padding: 76px 0 84px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .location-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--gold-400);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero-section h1 {
+      color: var(--white);
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .hero-section h1 span {
+      color: var(--gold-400);
+    }
+
+    .hero-tagline {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--gold-100);
+      margin-bottom: 14px;
+    }
+
+    .hero-desc {
+      color: var(--slate-300);
+      font-size: 1.02rem;
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-card h3 {
+      color: var(--white);
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-card p {
+      color: var(--slate-300);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--slate-100);
+    }
+
+    .check-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.22);
+      color: var(--gold-400);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.78rem;
+      flex-shrink: 0;
+    }
+
+    .trust-bar {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 26px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px;
+    }
+
+    .trust-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background-color: var(--gold-50);
+      border: 1px solid var(--gold-100);
+      color: var(--gold-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust-box strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--navy-900);
+    }
+
+    .trust-box span {
+      font-size: 0.82rem;
+      color: var(--slate-500);
+    }
+
+    /* ==========================================================================
+       6. UNIFORM STUDIO SHOWROOM FLEET GRID (ALL 5 CARS, ZERO NUMBER PLATES)
+       ========================================================================== */
+    .fleet-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    /* Top Row: 3 Equal Cards (each spans 2 of 6 columns) */
+    .fleet-grid-5 .vehicle-card:nth-child(1) { grid-column: 1 / 3; }
+    .fleet-grid-5 .vehicle-card:nth-child(2) { grid-column: 3 / 5; }
+    .fleet-grid-5 .vehicle-card:nth-child(3) { grid-column: 5 / 7; }
+
+    /* Bottom Row: 2 Centered Equal Cards (each spans 2 of 6 columns) */
+    .fleet-grid-5 .vehicle-card:nth-child(4) { grid-column: 2 / 4; }
+    .fleet-grid-5 .vehicle-card:nth-child(5) { grid-column: 4 / 6; }
+
+    .vehicle-card {
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--slate-300);
+    }
+
+    /* Uniform Studio Showroom Backdrop for All 5 Vehicles */
+    .studio-stage {
+      position: relative;
+      height: 225px;
+      background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 72%, #cbd5e1 100%);
+      border-bottom: 1px solid var(--slate-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Clean Editable Car Image Styling (Automatically fits any photo size) */
+    .car-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.35s ease;
+    }
+
+    .vehicle-card:hover .car-photo {
+      transform: scale(1.04);
+    }
+
+    /* Clean Editable Tour Package Header Image Styling */
+    .pkg-photo-wrap {
+      position: relative;
+      height: 175px;
+      margin: -26px -26px 18px -26px;
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+      overflow: hidden;
+      border-bottom: 2px solid var(--gold-500);
+    }
+
+    .pkg-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .pkg-box:hover .pkg-photo {
+      transform: scale(1.04);
+    }
+
+    .vehicle-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 3;
+      background-color: var(--navy-900);
+      color: var(--gold-400);
+      font-size: 0.71rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 11px;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+    }
+
+    .permit-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--slate-300);
+      color: var(--navy-900);
+      font-size: 0.69rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .vehicle-body {
+      padding: 22px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .vehicle-body h3 {
+      font-size: 1.26rem;
+      margin-bottom: 3px;
+    }
+
+    .vehicle-sub {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--gold-600);
+      margin-bottom: 14px;
+    }
+
+    .spec-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      background-color: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--navy-700);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .vehicle-desc {
+      color: var(--slate-600);
+      font-size: 0.89rem;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .vehicle-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding-top: 15px;
+      border-top: 1px solid var(--slate-100);
+      margin-top: auto;
+    }
+
+    .fleet-cta-row {
+      text-align: center;
+      margin-top: 38px;
+    }
+
+    /* ==========================================================================
+       7. TOUR PACKAGES & CIRCUIT TIMELINES
+       ========================================================================== */
+    .circuit-card {
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 34px;
+    }
+
+    .circuit-banner {
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+      color: var(--white);
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 3px solid var(--gold-500);
+    }
+
+    .circuit-banner h3 {
+      color: var(--white);
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .circuit-banner p {
+      color: var(--slate-300);
+      font-size: 0.9rem;
+    }
+
+    .circuit-content {
+      padding: 28px;
+    }
+
+    .stops-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+      gap: 14px;
+    }
+
+    .stop-node {
+      background-color: var(--bg-page);
+      border: 1px solid var(--slate-200);
+      border-left: 4px solid var(--gold-500);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stop-node:hover {
+      transform: translateY(-2px);
+      border-color: var(--navy-900);
+    }
+
+    .stop-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gold-600);
+      margin-bottom: 4px;
+    }
+
+    .stop-node h4 {
+      font-size: 0.98rem;
+      margin-bottom: 3px;
+    }
+
+    .stop-node span {
+      font-size: 0.81rem;
+      color: var(--slate-500);
+      display: block;
+    }
+
+    .pkg-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .pkg-box {
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .pkg-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: var(--gold-50);
+      color: var(--gold-600);
+      border: 1px solid var(--gold-100);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    .pkg-box h3 {
+      font-size: 1.22rem;
+      margin-bottom: 8px;
+    }
+
+    .pkg-box p {
+      color: var(--slate-600);
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================================================
+       8. SERVICES & 3-STEP BOOKING WORKFLOW
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background-color: var(--navy-900);
+      color: var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--slate-600);
+      font-size: 0.9rem;
+    }
+
+    .workflow-box {
+      background-color: var(--navy-900);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 38px 32px;
+    }
+
+    .workflow-box h3 {
+      color: var(--white);
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 28px;
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .workflow-step {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .step-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: var(--gold-500);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .workflow-step h4 {
+      color: var(--white);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .workflow-step p {
+      color: var(--slate-300);
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       9. CONTACT & BOOKING LAYOUT
+       ========================================================================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.15fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .office-card {
+      background: linear-gradient(145deg, var(--navy-900), var(--navy-800));
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .office-card h3 {
+      color: var(--white);
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .office-sub {
+      color: var(--gold-400);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 15px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(245, 158, 11, 0.16);
+      color: var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-row small {
+      display: block;
+      color: var(--slate-300);
+      font-size: 0.78rem;
+      margin-bottom: 2px;
+    }
+
+    .info-row a,
+    .info-row strong {
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .office-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .enquiry-card {
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .enquiry-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+
+    .enquiry-card > p {
+      color: var(--slate-600);
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-group.span-all {
+      grid-column: 1 / -1;
+    }
+
+    .field-group label {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--navy-800);
+    }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--slate-300);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--navy-900);
+      background-color: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus {
+      outline: none;
+      border-color: var(--gold-500);
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.14);
+    }
+
+    /* ==========================================================================
+       10. EXECUTIVE FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--navy-950);
+      color: var(--slate-300);
+      padding: 58px 0 26px;
+      margin-top: 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 32px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .site-footer h4 {
+      color: var(--white);
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+    }
+
+    .site-footer p,
+    .site-footer li {
+      font-size: 0.88rem;
+      color: var(--slate-300);
+    }
+
+    .site-footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-nav {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-nav:hover {
+      color: var(--gold-400);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--slate-500);
+    }
+
+    /* ==========================================================================
+       11. PURE-CSS FLOATING WHATSAPP BUTTON, CHAT POPUP & BOOKING MODAL
+       ========================================================================== */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1100;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--wa-green), var(--wa-dark));
+      color: var(--white);
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: 0 12px 28px rgba(18, 140, 126, 0.38);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(18, 140, 126, 0.46);
+    }
+
+    .wa-pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #bbf7d0;
+      box-shadow: 0 0 0 4px rgba(187, 247, 208, 0.3);
+    }
+
+    .wa-popup {
+      position: fixed;
+      bottom: 88px;
+      right: 24px;
+      width: 355px;
+      max-width: calc(100vw - 32px);
+      background-color: var(--white);
+      border-radius: 18px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 24px 52px rgba(15, 23, 42, 0.28);
+      z-index: 1150;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(16px) scale(0.96);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #wa-popup-toggle:checked ~ .wa-popup {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .wa-head {
+      background: linear-gradient(135deg, var(--wa-teal), var(--wa-dark));
+      color: var(--white);
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .wa-profile {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .wa-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .wa-profile h4 {
+      color: var(--white);
+      font-size: 0.94rem;
+      margin-bottom: 2px;
+    }
+
+    .wa-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #dcfce7;
+    }
+
+    .wa-status span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #4ade80;
+    }
+
+    .close-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .wa-body {
+      background-color: #efeae2;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .wa-bubble {
+      background-color: var(--white);
+      color: var(--navy-900);
+      padding: 12px 14px;
+      border-radius: 0 14px 14px 14px;
+      font-size: 0.85rem;
+      line-height: 1.48;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    .wa-bubble small {
+      display: block;
+      text-align: right;
+      color: var(--slate-500);
+      font-size: 0.69rem;
+      margin-top: 4px;
+    }
+
+    .wa-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--slate-600);
+      margin-top: 2px;
+    }
+
+    .wa-quick-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--white);
+      border: 1px solid var(--slate-200);
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 0.81rem;
+      font-weight: 600;
+      color: var(--navy-900);
+      transition: all 0.2s ease;
+    }
+
+    .wa-quick-item:hover {
+      border-color: var(--wa-green);
+      background-color: #f0fdf4;
+      color: var(--wa-teal);
+    }
+
+    .wa-foot {
+      background-color: var(--white);
+      padding: 13px 16px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    /* Quick Cab Booking Modal Overlay */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 1250;
+      background: rgba(8, 13, 25, 0.74);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.25s ease;
+    }
+
+    #quick-book-toggle:checked ~ .modal-backdrop {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .modal-dialog {
+      background-color: var(--white);
+      width: 100%;
+      max-width: 520px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 25px 60px rgba(8, 13, 25, 0.45);
+      overflow: hidden;
+      max-height: 92vh;
+      overflow-y: auto;
+      transform: translateY(14px) scale(0.97);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #quick-book-toggle:checked ~ .modal-backdrop .modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-top {
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+      color: var(--white);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 3px solid var(--gold-500);
+    }
+
+    .modal-top h3 {
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-bottom: 2px;
+    }
+
+    .modal-top p {
+      color: var(--slate-300);
+      font-size: 0.8rem;
+    }
+
+    .modal-content {
+      padding: 22px 24px;
+    }
+
+    .modal-footer-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE ADAPTATIONS (MOBILE, TABLET, DESKTOP)
+       ========================================================================== */
+    @media (max-width: 1060px) {
+      .fleet-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .fleet-grid-5 .vehicle-card:nth-child(1),
+      .fleet-grid-5 .vehicle-card:nth-child(2),
+      .fleet-grid-5 .vehicle-card:nth-child(3),
+      .fleet-grid-5 .vehicle-card:nth-child(4) {
+        grid-column: auto;
+      }
+
+      .fleet-grid-5 .vehicle-card:nth-child(5) {
+        grid-column: 1 / -1;
+        max-width: 520px;
+        width: 100%;
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-section h1 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .top-bar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hamburger-btn {
+        display: inline-flex;
+      }
+
+      .primary-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 8px;
+        border-top: 1px solid var(--slate-200);
+      }
+
+      #mobile-nav-toggle:checked ~ .site-wrapper .primary-nav {
+        display: flex;
+      }
+
+      .header-cta {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .header-cta .btn {
+        flex: 1;
+      }
+
+      .hero-section {
+        padding: 52px 0 60px;
+      }
+
+      .hero-section h1 {
+        font-size: 1.9rem;
+      }
+
+      .fleet-grid-5 {
+        grid-template-columns: 1fr;
+      }
+
+      .fleet-grid-5 .vehicle-card:nth-child(5) {
+        grid-column: auto;
+        max-width: none;
+      }
+
+      .trust-grid,
+      .vehicle-actions,
+      .form-grid,
+      .office-actions,
+      .modal-footer-btns,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-block {
+        padding: 50px 0;
+      }
+
+      .section-head h2 {
+        font-size: 1.65rem;
+      }
+
+      .wa-float {
+        bottom: 16px;
+        right: 16px;
+        padding: 11px 16px;
+        font-size: 0.85rem;
+      }
+
+      .wa-popup {
+        bottom: 74px;
+        right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       PURE-CSS PAGE & POPUP STATE INPUTS (ZERO JAVASCRIPT)
+       ======================================================================== -->
+  <input type="radio" name="nav-tab" id="page-home" class="page-radio" checked>
+  <input type="radio" name="nav-tab" id="page-fleet" class="page-radio">
+  <input type="radio" name="nav-tab" id="page-packages" class="page-radio">
+  <input type="radio" name="nav-tab" id="page-services" class="page-radio">
+  <input type="radio" name="nav-tab" id="page-contact" class="page-radio">
+
+  <input type="checkbox" id="mobile-nav-toggle" class="modal-toggle">
+  <input type="checkbox" id="wa-popup-toggle" class="modal-toggle">
+  <input type="checkbox" id="quick-book-toggle" class="modal-toggle">
+
+  <div class="site-wrapper">
+
+    <!-- Top Blessing & Helpline Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="blessing-text">॥ जय श्री सांवरिया सेठ ॥</div>
+        <div class="top-meta">
+          <span>Shujalpur Mandi, District Shajapur (M.P.)</span>
+          <span>•</span>
+          <span>All India Permit</span>
+          <span>•</span>
+          <a href="tel:+918200423791" class="top-phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            24×7 Booking: +91 82004 23791
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Executive Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <label for="page-home" class="brand-mark">
+          <div class="brand-emblem" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+              <circle cx="7" cy="17" r="2"/>
+              <path d="M9 17h6"/>
+              <circle cx="17" cy="17" r="2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">Seth Sanvariya</div>
+            <div class="brand-sub">Tour And Travels</div>
+          </div>
+        </label>
+
+        <label for="mobile-nav-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </label>
+
+        <nav class="primary-nav" aria-label="Main Navigation">
+          <label for="page-home" class="nav-tab">Home</label>
+          <label for="page-fleet" class="nav-tab">Our Fleet</label>
+          <label for="page-packages" class="nav-tab">Tour Packages</label>
+          <label for="page-services" class="nav-tab">Services</label>
+          <label for="page-contact" class="nav-tab">Contact &amp; Booking</label>
+        </nav>
+
+        <div class="header-cta">
+          <label for="quick-book-toggle" class="btn btn-gold btn-sm">Quick Book Now</label>
+          <label for="wa-popup-toggle" class="btn btn-wa btn-sm">WhatsApp</label>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         PAGE 1: HOME (HERO + TRUST PILLARS + ALL 5 STUDIO VEHICLES + YATRAS)
+         ====================================================================== -->
+    <main id="view-home" class="page-section">
+      <!-- Hero Banner -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div>
+            <div class="location-tag">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Shujalpur Mandi, District Shajapur, Madhya Pradesh (M.P.)
+            </div>
+            <h1>Executive &amp; Reliable Travel with <span>Seth Sanvariya</span></h1>
+            <div class="hero-tagline">आपकी यात्रा, हमारी जिम्मेदारी • Your Journey, Our Responsibility</div>
+            <p class="hero-desc">
+              Premier travel and cab rental agency based in Shujalpur Mandi. Offering All India Permit luxury vehicles, sacred pilgrimage yatras, wedding car rentals, and punctual airport transfers with experienced chauffeurs.
+            </p>
+            <div class="hero-actions">
+              <label for="quick-book-toggle" class="btn btn-gold">Quick Book Now</label>
+              <label for="page-packages" class="btn btn-glass">Explore Yatra Packages</label>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <h3>24×7 Direct Cab Dispatch</h3>
+            <p>Clean, air-conditioned Indian tourist vehicles ready for local &amp; all-India travel.</p>
+            <ul class="hero-checklist">
+              <li>
+                <span class="check-dot">✓</span>
+                <span>All India Permit Tourist Vehicles</span>
+              </li>
+              <li>
+                <span class="check-dot">✓</span>
+                <span>Experienced &amp; Verified Chauffeurs</span>
+              </li>
+              <li>
+                <span class="check-dot">✓</span>
+                <span>24×7 Service Available Across M.P. &amp; India</span>
+              </li>
+              <li>
+                <span class="check-dot">✓</span>
+                <span>Safe &amp; Comfortable Family Journeys</span>
+              </li>
+            </ul>
+            <a href="tel:+918200423791" class="btn btn-gold" style="width: 100%;">Call Direct: +91 82004 23791</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Trust Pillars Bar -->
+      <section class="trust-bar">
+        <div class="container trust-grid">
+          <div class="trust-box">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <strong>All India Permit</strong>
+              <span>Interstate Tourist Authorization</span>
+            </div>
+          </div>
+          <div class="trust-box">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            </div>
+            <div>
+              <strong>Experienced Drivers</strong>
+              <span>Verified Highway Chauffeurs</span>
+            </div>
+          </div>
+          <div class="trust-box">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>24×7 Service Available</strong>
+              <span>Day &amp; Night Dispatch Desk</span>
+            </div>
+          </div>
+          <div class="trust-box">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <strong>Safe &amp; Comfortable</strong>
+              <span>Sanitized AC Tourist Fleet</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All 5 Vehicles Showcase Grid on Home Page -->
+      <section class="section-block">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Our Complete 5-Vehicle Fleet</span>
+            <h2>Indian Road-Spec Luxury &amp; Family Vehicles</h2>
+            <p>All 5 sanitized, All India Permit tourist vehicles stationed in Shujalpur Mandi—presented in uniform studio view with zero registration plates.</p>
+          </div>
+
+          <div class="fleet-grid-5">
+            <!-- 1. Kia Carens -->
+            <article class="vehicle-card">
+              <div class="studio-stage">
+                <span class="vehicle-badge">7-Seater Luxury MPV</span>
+                <span class="permit-tag">All India Permit</span>
+                <!-- EDIT CAR IMAGE (Home - Kia Carens): Apni photo ko 'images/carens.jpg' naam se save karein -->
+                <img
+                  src="images/carens.jpg"
+                  alt="Kia Carens - Seth Sanvariya Tour And Travels"
+                  class="car-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EKia Carens (7-Seater)%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/carens.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <div class="vehicle-body">
+                <h3>Kia Carens</h3>
+                <div class="vehicle-sub">Premium 7-Seater Luxury MPV</div>
+                <div class="spec-row">
+                  <span class="spec-pill">7 Seater</span>
+                  <span class="spec-pill">Roof Diffused AC</span>
+                  <span class="spec-pill">Captain / Bench Comfort</span>
+                </div>
+                <p class="vehicle-desc">Imperial Blue executive MPV featuring plush seating, roof-mounted AC vents, and refined suspension for VIP weddings and long family tours.</p>
+                <div class="vehicle-actions">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Kia%20Carens%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                  <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Maruti Suzuki Ertiga -->
+            <article class="vehicle-card">
+              <div class="studio-stage">
+                <span class="vehicle-badge">Most Popular Family MPV</span>
+                <span class="permit-tag">All India Permit</span>
+                <!-- EDIT CAR IMAGE (Home - Maruti Suzuki Ertiga): Apni photo ko 'images/ertiga.jpg' naam se save karein -->
+                <img
+                  src="images/ertiga.jpg"
+                  alt="Maruti Suzuki Ertiga - Seth Sanvariya Tour And Travels"
+                  class="car-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Ertiga%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/ertiga.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <div class="vehicle-body">
+                <h3>Maruti Suzuki Ertiga</h3>
+                <div class="vehicle-sub">Comfort 7-Seater Family MPV</div>
+                <div class="spec-row">
+                  <span class="spec-pill">7 Seater</span>
+                  <span class="spec-pill">Dual AC Vents</span>
+                  <span class="spec-pill">Spacious Luggage</span>
+                </div>
+                <p class="vehicle-desc">India’s trusted Pearl Arctic White 7-seater family MUV with dual-row chilled AC and reclining seats—ideal for pilgrimage yatras and outstation trips.</p>
+                <div class="vehicle-actions">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Maruti%20Suzuki%20Ertiga%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                  <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Maruti Suzuki Swift Dzire -->
+            <article class="vehicle-card">
+              <div class="studio-stage">
+                <span class="vehicle-badge">Executive Sedan</span>
+                <span class="permit-tag">All India Permit</span>
+                <!-- EDIT CAR IMAGE (Home - Swift Dzire): Apni photo ko 'images/dzire.jpg' naam se save karein -->
+                <img
+                  src="images/dzire.jpg"
+                  alt="Maruti Suzuki Swift Dzire - Seth Sanvariya Tour And Travels"
+                  class="car-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Swift Dzire%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/dzire.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <div class="vehicle-body">
+                <h3>Maruti Suzuki Swift Dzire</h3>
+                <div class="vehicle-sub">Executive 4+1 Compact Sedan</div>
+                <div class="spec-row">
+                  <span class="spec-pill">4+1 Seater</span>
+                  <span class="spec-pill">Climate Control AC</span>
+                  <span class="spec-pill">Airport &amp; Business</span>
+                </div>
+                <p class="vehicle-desc">Silky Silver metallic compact sedan with rear AC vents and plush boot capacity—ideal for Indore/Bhopal airport pickups and corporate trips.</p>
+                <div class="vehicle-actions">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Maruti%20Suzuki%20Swift%20Dzire%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                  <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Maruti Suzuki Eeco -->
+            <article class="vehicle-card">
+              <div class="studio-stage">
+                <span class="vehicle-badge">7-Seater Utility Van</span>
+                <span class="permit-tag">All India Permit</span>
+                <!-- EDIT CAR IMAGE (Home - Maruti Suzuki Eeco): Apni photo ko 'images/eeco.jpg' naam se save karein -->
+                <img
+                  src="images/eeco.jpg"
+                  alt="Maruti Suzuki Eeco - Seth Sanvariya Tour And Travels"
+                  class="car-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Eeco%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/eeco.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <div class="vehicle-body">
+                <h3>Maruti Suzuki Eeco</h3>
+                <div class="vehicle-sub">7-Seater Utility &amp; Group Van</div>
+                <div class="spec-row">
+                  <span class="spec-pill">7 Seater</span>
+                  <span class="spec-pill">High-Roof Cabin</span>
+                  <span class="spec-pill">Budget Friendly</span>
+                </div>
+                <p class="vehicle-desc">Superior White high-headroom van with wide dual sliding doors and generous cargo space—ideal for budget-friendly local and family group travel.</p>
+                <div class="vehicle-actions">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Maruti%20Suzuki%20Eeco%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                  <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Force Traveller -->
+            <article class="vehicle-card">
+              <div class="studio-stage">
+                <span class="vehicle-badge">17-Seater Luxury Coach</span>
+                <span class="permit-tag">All India Permit</span>
+                <!-- EDIT CAR IMAGE (Home - Force Traveller): Apni photo ko 'images/traveller.jpg' naam se save karein -->
+                <img
+                  src="images/traveller.jpg"
+                  alt="Force Traveller - Seth Sanvariya Tour And Travels"
+                  class="car-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EForce Traveller (17-Seater)%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/traveller.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <div class="vehicle-body">
+                <h3>Force Traveller</h3>
+                <div class="vehicle-sub">17-Seater Luxury Tempo Traveller</div>
+                <div class="spec-row">
+                  <span class="spec-pill">17 Seater</span>
+                  <span class="spec-pill">Push-Back Seats</span>
+                  <span class="spec-pill">Roof Carrier &amp; Full AC</span>
+                </div>
+                <p class="vehicle-desc">Arctic White high-roof luxury group coach with individual AC vents, push-back recliner seating, and roof luggage carrier for pilgrimages and weddings.</p>
+                <div class="vehicle-actions">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Force%20Traveller%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                  <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="fleet-cta-row">
+            <label for="page-fleet" class="btn btn-navy">Compare Detailed Fleet Specifications →</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Yatra Circuits Preview -->
+      <section class="section-block section-white">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Signature Pilgrimage Circuits</span>
+            <h2>Sacred Yatra &amp; Sightseeing Packages from Shujalpur</h2>
+            <p>Complete round-trip packages with experienced highway &amp; temple-route drivers who ensure peaceful darshan for your family.</p>
+          </div>
+
+          <div class="pkg-cards-grid">
+            <div class="pkg-box">
+              <div>
+                <div class="pkg-photo-wrap">
+                  <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-malwa.jpg' naam se save karein -->
+                  <img
+                    src="images/pkg-malwa.jpg"
+                    alt="Malwa & Narmada Darshan Yatra"
+                    class="pkg-photo"
+                    onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EMalwa %26 Narmada Darshan%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-malwa.jpg%3C/text%3E%3C/svg%3E';"
+                  >
+                </div>
+                <span class="pkg-tag">10-Stop Complete Circuit</span>
+                <h3>Malwa &amp; Narmada Darshan Yatra</h3>
+                <p>Shujalpur → Patalpani Waterfall → Janapav Kuti → Tincha Waterfall → Mandu (Dhar) → Maheshwar Ghat → Maheshwar → Omkareshwar Jyotirlinga → Mamleshwar Mahadev → Narmada-Kaveri Sangam → Shujalpur.</p>
+              </div>
+              <label for="page-packages" class="btn btn-navy">Explore 10-Stop Route →</label>
+            </div>
+
+            <div class="pkg-box">
+              <div>
+                <div class="pkg-photo-wrap">
+                  <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-vaishno.jpg' naam se save karein -->
+                  <img
+                    src="images/pkg-vaishno.jpg"
+                    alt="Vaishno Devi & Himachal Tour"
+                    class="pkg-photo"
+                    onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EVaishno Devi %26 Himachal Yatra%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-vaishno.jpg%3C/text%3E%3C/svg%3E';"
+                  >
+                </div>
+                <span class="pkg-tag">North India Shaktipeeth Yatra</span>
+                <h3>Vaishno Devi &amp; Himachal Tour</h3>
+                <p>Shujalpur Mandi to Jalandhar/Chandigarh, Chamunda Devi, Brajeshwari, Jwalamukhi, Chintpurni, Naina Devi &amp; Mata Vaishno Devi (Katra).</p>
+              </div>
+              <label for="page-packages" class="btn btn-navy">Explore Full Route →</label>
+            </div>
+
+            <div class="pkg-box">
+              <div>
+                <div class="pkg-photo-wrap">
+                  <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-ujjain.jpg' naam se save karein -->
+                  <img
+                    src="images/pkg-ujjain.jpg"
+                    alt="Ujjain Mahakal & Dwarka Yatra"
+                    class="pkg-photo"
+                    onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EUjjain Mahakal %26 Dwarka Tour%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-ujjain.jpg%3C/text%3E%3C/svg%3E';"
+                  >
+                </div>
+                <span class="pkg-tag">Jyotirlinga &amp; Gujarat Tours</span>
+                <h3>Ujjain Mahakal &amp; Dwarka Yatra</h3>
+                <p>Same-day Shree Mahakaleshwar Jyotirlinga &amp; Omkareshwar darshan, plus multi-day Dwarka &amp; Somnath pilgrimage packages.</p>
+              </div>
+              <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20please%20share%20rates%20for%20Ujjain%20Mahakal%20%26%20Dwarka%20Yatra." target="_blank" rel="noopener noreferrer" class="btn btn-wa">Enquire on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================================================
+         PAGE 2: OUR FLEET (DETAILED SPECIFICATIONS FOR ALL 5 VEHICLES)
+         ====================================================================== -->
+    <section id="view-fleet" class="page-section section-block">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our Complete Fleet</span>
+          <h2>5 Well-Maintained Indian Vehicles for Every Travel Need</h2>
+          <p>All vehicles carry valid All India Tourist Permits, clean air-conditioned cabins, and verified highway chauffeurs—strictly zero registration plates shown.</p>
+        </div>
+
+        <div class="fleet-grid-5">
+          <!-- 1. Kia Carens -->
+          <article class="vehicle-card">
+            <div class="studio-stage">
+              <span class="vehicle-badge">7-Seater Luxury MPV</span>
+              <span class="permit-tag">All India Permit</span>
+              <!-- EDIT CAR IMAGE (Fleet Page - Kia Carens): images/carens.jpg -->
+              <img
+                src="images/carens.jpg"
+                alt="Kia Carens - Seth Sanvariya Tour And Travels"
+                class="car-photo"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EKia Carens (7-Seater)%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/carens.jpg%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <div class="vehicle-body">
+              <h3>Kia Carens</h3>
+              <div class="vehicle-sub">Premium 7-Seater Luxury MPV</div>
+              <div class="spec-row">
+                <span class="spec-pill">Seating: 7 + Driver</span>
+                <span class="spec-pill">Luggage: 4 Bags</span>
+                <span class="spec-pill">Roof Diffused AC</span>
+              </div>
+              <p class="vehicle-desc"><strong>Best For:</strong> VIP Wedding Guests, Executive Corporate Tours &amp; Long Family Highways. Features plush captain/bench comfort and refined suspension.</p>
+              <div class="vehicle-actions">
+                <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20Kia%20Carens." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Maruti Suzuki Ertiga -->
+          <article class="vehicle-card">
+            <div class="studio-stage">
+              <span class="vehicle-badge">Most Popular Family MPV</span>
+              <span class="permit-tag">All India Permit</span>
+              <!-- EDIT CAR IMAGE (Fleet Page - Maruti Suzuki Ertiga): images/ertiga.jpg -->
+              <img
+                src="images/ertiga.jpg"
+                alt="Maruti Suzuki Ertiga - Seth Sanvariya Tour And Travels"
+                class="car-photo"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Ertiga%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/ertiga.jpg%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <div class="vehicle-body">
+              <h3>Maruti Suzuki Ertiga</h3>
+              <div class="vehicle-sub">Comfort 7-Seater Family MPV</div>
+              <div class="spec-row">
+                <span class="spec-pill">Seating: 7 + Driver</span>
+                <span class="spec-pill">Luggage: 4 Bags</span>
+                <span class="spec-pill">Dual AC Vents</span>
+              </div>
+              <p class="vehicle-desc"><strong>Best For:</strong> Religious Pilgrimage Yatras, Malwa &amp; Narmada Circuits &amp; Outstation Family Vacations. Balanced comfort and fuel efficiency.</p>
+              <div class="vehicle-actions">
+                <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20Maruti%20Suzuki%20Ertiga." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Maruti Suzuki Swift Dzire -->
+          <article class="vehicle-card">
+            <div class="studio-stage">
+              <span class="vehicle-badge">Executive Sedan</span>
+              <span class="permit-tag">All India Permit</span>
+              <!-- EDIT CAR IMAGE (Fleet Page - Swift Dzire): images/dzire.jpg -->
+              <img
+                src="images/dzire.jpg"
+                alt="Maruti Suzuki Swift Dzire - Seth Sanvariya Tour And Travels"
+                class="car-photo"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Swift Dzire%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/dzire.jpg%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <div class="vehicle-body">
+              <h3>Maruti Suzuki Swift Dzire</h3>
+              <div class="vehicle-sub">Executive 4+1 Compact Sedan</div>
+              <div class="spec-row">
+                <span class="spec-pill">Seating: 4 + Driver</span>
+                <span class="spec-pill">Luggage: 3 Bags</span>
+                <span class="spec-pill">Auto Climate AC</span>
+              </div>
+              <p class="vehicle-desc"><strong>Best For:</strong> Indore &amp; Bhopal Airport Transfers, Business Travel &amp; Ujjain Day Trips. Plush rear cabin with dedicated rear AC vents.</p>
+              <div class="vehicle-actions">
+                <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20Maruti%20Suzuki%20Swift%20Dzire." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Maruti Suzuki Eeco -->
+          <article class="vehicle-card">
+            <div class="studio-stage">
+              <span class="vehicle-badge">7-Seater Utility Van</span>
+              <span class="permit-tag">All India Permit</span>
+              <!-- EDIT CAR IMAGE (Fleet Page - Maruti Suzuki Eeco): images/eeco.jpg -->
+              <img
+                src="images/eeco.jpg"
+                alt="Maruti Suzuki Eeco - Seth Sanvariya Tour And Travels"
+                class="car-photo"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EMaruti Suzuki Eeco%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/eeco.jpg%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <div class="vehicle-body">
+              <h3>Maruti Suzuki Eeco</h3>
+              <div class="vehicle-sub">7-Seater Utility &amp; Group Van</div>
+              <div class="spec-row">
+                <span class="spec-pill">Seating: 7 + Driver</span>
+                <span class="spec-pill">Extra Cargo Space</span>
+                <span class="spec-pill">High-Roof Cabin</span>
+              </div>
+              <p class="vehicle-desc"><strong>Best For:</strong> Economical Family Outings, Local Shujalpur Mandi Transfers &amp; Wedding Guest Shuttles. Wide sliding doors for effortless entry.</p>
+              <div class="vehicle-actions">
+                <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20Maruti%20Suzuki%20Eeco." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Force Traveller -->
+          <article class="vehicle-card">
+            <div class="studio-stage">
+              <span class="vehicle-badge">17-Seater Luxury Coach</span>
+              <span class="permit-tag">All India Permit</span>
+              <!-- EDIT CAR IMAGE (Fleet Page - Force Traveller): images/traveller.jpg -->
+              <img
+                src="images/traveller.jpg"
+                alt="Force Traveller - Seth Sanvariya Tour And Travels"
+                class="car-photo"
+                onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22300%22 y=%22172%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2224%22 font-weight=%22bold%22 fill=%22%230f172a%22%3EForce Traveller (17-Seater)%3C/text%3E%3Ctext x=%22300%22 y=%22206%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2216%22 fill=%22%23475569%22%3EAdd photo: images/traveller.jpg%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <div class="vehicle-body">
+              <h3>Force Traveller</h3>
+              <div class="vehicle-sub">17-Seater Luxury Tempo Traveller</div>
+              <div class="spec-row">
+                <span class="spec-pill">Seating: 17 + Driver</span>
+                <span class="spec-pill">Push-Back Seats</span>
+                <span class="spec-pill">Roof Carrier &amp; Full AC</span>
+              </div>
+              <p class="vehicle-desc"><strong>Best For:</strong> Vaishno Devi &amp; Dwarka Group Yatras, Wedding Baraat &amp; School/Corporate Excursions. High-roof standing aisle with panoramic windows.</p>
+              <div class="vehicle-actions">
+                <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20Force%20Traveller." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp Book</a>
+                <a href="tel:+918200423791" class="btn btn-outline btn-sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 3: TOUR PACKAGES & COMPLETE CIRCUITS
+         ====================================================================== -->
+    <section id="view-packages" class="page-section section-block">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tour Packages</span>
+          <h2>Curated Pilgrimage &amp; Heritage Yatra Circuits</h2>
+          <p>Departing from Shujalpur Mandi with complete route planning, comfortable halts, and experienced temple-route chauffeurs.</p>
+        </div>
+
+        <!-- Circuit 1: 10-Stop Malwa & Narmada Darshan Yatra -->
+        <div class="circuit-card">
+          <div class="circuit-banner">
+            <div>
+              <h3>1. Malwa &amp; Narmada Darshan Yatra (10-Stop Complete Circuit)</h3>
+              <p>Shujalpur → Patalpani Waterfall → Janapav Kuti → Tincha Waterfall → Mandu (Dhar) → Maheshwar Ghat → Maheshwar → Omkareshwar Jyotirlinga → Mamleshwar Mahadev Temple → Narmada-Kaveri Sangam → Shujalpur</p>
+            </div>
+            <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20please%20share%20rates%20for%20the%2010-Stop%20Malwa%20%26%20Narmada%20Darshan%20Yatra." target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book on WhatsApp</a>
+          </div>
+          <div class="circuit-content">
+            <div class="stops-grid">
+              <div class="stop-node">
+                <span class="stop-badge">Stop 01 • Origin</span>
+                <h4>Shujalpur</h4>
+                <span>Doorstep pickup from Shujalpur Mandi</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 02</span>
+                <h4>Patalpani Waterfall</h4>
+                <span>Scenic valley &amp; waterfall viewpoint</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 03</span>
+                <h4>Janapav Kuti</h4>
+                <span>Birthplace of Bhagwan Parashurama</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 04</span>
+                <h4>Tincha Waterfall</h4>
+                <span>Natural canyon waterfall halt</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 05</span>
+                <h4>Mandu (Dhar)</h4>
+                <span>Jahaz Mahal &amp; heritage fort complex</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 06</span>
+                <h4>Maheshwar Ghat</h4>
+                <span>Ahilya Fort &amp; sacred Narmada ghats</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 07</span>
+                <h4>Maheshwar</h4>
+                <span>Ancient Narmada riverbank temples</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 08</span>
+                <h4>Omkareshwar Jyotirlinga</h4>
+                <span>Shree Omkareshwar Mahadev Darshan</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 09</span>
+                <h4>Mamleshwar Mahadev Temple</h4>
+                <span>Sacred Jyotirlinga shrine darshan</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stop 10 • Return</span>
+                <h4>Narmada-Kaveri Sangam</h4>
+                <span>Holy confluence &amp; return to Shujalpur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Circuit 2: Vaishno Devi & Himachal Shaktipeeth Yatra -->
+        <div class="circuit-card">
+          <div class="circuit-banner">
+            <div>
+              <h3>2. Vaishno Devi &amp; Himachal Shaktipeeth Yatra</h3>
+              <p>All India Permit North India Devi Darshan circuit departing from Shujalpur Mandi</p>
+            </div>
+            <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20please%20share%20rates%20for%20Vaishno%20Devi%20%26%20Himachal%20Shaktipeeth%20Yatra." target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book on WhatsApp</a>
+          </div>
+          <div class="circuit-content">
+            <div class="stops-grid">
+              <div class="stop-node">
+                <span class="stop-badge">Stage 01 • Start</span>
+                <h4>Shujalpur Mandi</h4>
+                <span>Comfortable departure from Madhya Pradesh</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stage 02 • Transit</span>
+                <h4>Jalandhar / Chandigarh</h4>
+                <span>Rest halt &amp; local sightseeing</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stage 03 • 5 Shaktipeeths</span>
+                <h4>Himachal Devi Darshan</h4>
+                <span>Chamunda, Brajeshwari, Jwalamukhi, Chintpurni &amp; Naina Devi</span>
+              </div>
+              <div class="stop-node">
+                <span class="stop-badge">Stage 04 • Jammu &amp; Return</span>
+                <h4>Katra (Mata Vaishno Devi)</h4>
+                <span>Mata Vaishno Devi Bhawan darshan &amp; return to Shujalpur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Popular Tours -->
+        <div class="pkg-cards-grid">
+          <div class="pkg-box">
+            <div>
+              <div class="pkg-photo-wrap">
+                <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-ujjain.jpg' naam se save karein -->
+                <img
+                  src="images/pkg-ujjain.jpg"
+                  alt="Ujjain Mahakal & Omkareshwar Jyotirlinga"
+                  class="pkg-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EUjjain Mahakal %26 Omkareshwar%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-ujjain.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <span class="pkg-tag">Jyotirlinga Special</span>
+              <h3>Ujjain Mahakal &amp; Omkareshwar Jyotirlinga</h3>
+              <p>Same-day and overnight family darshan packages from Shujalpur Mandi covering Shree Mahakaleshwar Jyotirlinga, Shree Mahakal Lok, and Omkareshwar.</p>
+            </div>
+            <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Ujjain%20Mahakal%20%26%20Omkareshwar%20Tour." target="_blank" rel="noopener noreferrer" class="btn btn-wa">Book on WhatsApp</a>
+          </div>
+
+          <div class="pkg-box">
+            <div>
+              <div class="pkg-photo-wrap">
+                <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-dwarka.jpg' naam se save karein -->
+                <img
+                  src="images/pkg-dwarka.jpg"
+                  alt="Dwarka & Somnath Yatra"
+                  class="pkg-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EDwarka %26 Somnath Yatra%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-dwarka.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <span class="pkg-tag">Gujarat Pilgrimage</span>
+              <h3>Dwarka &amp; Somnath Yatra</h3>
+              <p>Multi-day All India Permit tour from Shujalpur Mandi covering Shree Dwarkadhish Temple, Bet Dwarka, Nageshwar Jyotirlinga, and Somnath Jyotirlinga.</p>
+            </div>
+            <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Dwarka%20%26%20Somnath%20Yatra." target="_blank" rel="noopener noreferrer" class="btn btn-wa">Book on WhatsApp</a>
+          </div>
+
+          <div class="pkg-box">
+            <div>
+              <div class="pkg-photo-wrap">
+                <!-- EDIT PACKAGE IMAGE: Apni photo 'images/pkg-wedding.jpg' naam se save karein -->
+                <img
+                  src="images/pkg-wedding.jpg"
+                  alt="Wedding Fleet & Airport Pickup/Drop"
+                  class="pkg-photo"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22%3E%3Crect width=%22600%22 height=%22300%22 fill=%22%231e293b%22/%3E%3Ctext x=%22300%22 y=%22142%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23f59e0b%22%3EWedding Fleet %26 Airport Transfer%3C/text%3E%3Ctext x=%22300%22 y=%22174%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23cbd5e1%22%3EAdd photo: images/pkg-wedding.jpg%3C/text%3E%3C/svg%3E';"
+                >
+              </div>
+              <span class="pkg-tag">Events &amp; Airport Transfers</span>
+              <h3>Wedding Fleet &amp; Airport Pickup/Drop</h3>
+              <p>Luxury wedding &amp; baraat vehicles (Kia Carens, Ertiga, Dzire, 17-Seater Force Traveller) plus 24×7 Indore &amp; Bhopal Airport transfers.</p>
+            </div>
+            <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20Wedding%20Fleet%20/%20Airport%20Transfer." target="_blank" rel="noopener noreferrer" class="btn btn-wa">Book on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 4: SERVICES (6 STRUCTURED SERVICE CARDS + 3-STEP WORKFLOW)
+         ====================================================================== -->
+    <section id="view-services" class="page-section section-block">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our Services</span>
+          <h2>6 Specialized Travel &amp; Car Rental Services</h2>
+          <p>Serving families, pilgrims, wedding hosts, and corporate travellers across Shujalpur Mandi and all of India.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>1. Local Taxi Service in Shujalpur</h3>
+            <p>Prompt point-to-point cab service in Shujalpur Mandi, Shujalpur City, Shujalpur Railway Station, and nearby towns.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>2. Outstation &amp; All India Permit Taxi</h3>
+            <p>Authorized interstate tourist vehicles for seamless travel to Bhopal, Indore, Ujjain, Rajasthan, Gujarat, Maharashtra, and Himachal.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>3. Wedding &amp; Party Car Rental</h3>
+            <p>Luxury Kia Carens, Ertiga, Swift Dzire, and 17-Seater Force Travellers for wedding VIP hospitality and baraat movements.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>4. Religious &amp; Pilgrimage Yatra Packages</h3>
+            <p>Devotional tours to Shree Sanwariya Seth, Mahakaleshwar, Omkareshwar, Vaishno Devi, and Dwarka with patient, respectful chauffeurs.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>5. Family &amp; Picnic Tours</h3>
+            <p>Customized holiday itineraries, waterfall excursions, and weekend family getaways with spacious luggage capacity and safe drivers.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </div>
+            <h3>6. Corporate &amp; Airport Transfers</h3>
+            <p>Punctual 24×7 pickup and drop service to Devi Ahilyabai Holkar Airport (Indore) and Raja Bhoj Airport (Bhopal).</p>
+          </div>
+        </div>
+
+        <!-- 3-Step Booking Workflow -->
+        <div class="workflow-box">
+          <h3>Book Your Ride in 3 Simple Steps</h3>
+          <div class="workflow-grid">
+            <div class="workflow-step">
+              <div class="step-circle">1</div>
+              <h4>Select Vehicle or Tour</h4>
+              <p>Choose from Kia Carens, Ertiga, Swift Dzire, Eeco, or 17-Seater Force Traveller.</p>
+            </div>
+            <div class="workflow-step">
+              <div class="step-circle">2</div>
+              <h4>Call or WhatsApp +91 82004 23791</h4>
+              <p>Confirm your pickup address in Shujalpur Mandi, destination, and date with our 24×7 desk.</p>
+            </div>
+            <div class="workflow-step">
+              <div class="step-circle">3</div>
+              <h4>Travel with Peace of Mind</h4>
+              <p>Your clean, air-conditioned vehicle arrives on schedule—आपकी यात्रा, हमारी जिम्मेदारी।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 5: CONTACT & BOOKING
+         ====================================================================== -->
+    <section id="view-contact" class="page-section section-block">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Contact &amp; Booking</span>
+          <h2>24×7 Cab Reservation &amp; Enquiry Desk</h2>
+          <p>Reach out anytime via Phone Call, WhatsApp, or the booking enquiry form below for instant assistance.</p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="office-card">
+            <h3>Seth Sanvariya Tour And Travels</h3>
+            <div class="office-sub">॥ जय श्री सांवरिया सेठ ॥ • आपकी यात्रा, हमारी जिम्मेदारी</div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <small>24×7 Direct Call &amp; WhatsApp Helpline</small>
+                <a href="tel:+918200423791">+91 82004 23791</a>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <small>Office Location</small>
+                <strong>Shujalpur Mandi, District Shajapur,<br>Madhya Pradesh (M.P.), India</strong>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <small>24×7 Dispatch Desk Info</small>
+                <strong>Open 24 Hours • All India Permit</strong>
+              </div>
+            </div>
+
+            <div class="office-actions">
+              <a href="tel:+918200423791" class="btn btn-gold">Call +91 82004 23791</a>
+              <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer" class="btn btn-wa">WhatsApp Chat</a>
+            </div>
+          </aside>
+
+          <div class="enquiry-card">
+            <h3>Submit a Trip or Cab Booking Request</h3>
+            <p>Fill out your travel details below or click the direct WhatsApp booking button for instant confirmation.</p>
+
+            <form action="mailto:bookings@sethsanvariyatravels.in" method="post" enctype="text/plain">
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="f-name">Full Name *</label>
+                  <input type="text" id="f-name" name="Full_Name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="field-group">
+                  <label for="f-phone">Mobile / WhatsApp Number *</label>
+                  <input type="tel" id="f-phone" name="Mobile_Number" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+
+                <div class="field-group">
+                  <label for="f-pickup">Pickup City / Location *</label>
+                  <input type="text" id="f-pickup" name="Pickup_Location" value="Shujalpur Mandi" required>
+                </div>
+
+                <div class="field-group">
+                  <label for="f-drop">Destination / Package *</label>
+                  <input type="text" id="f-drop" name="Destination" placeholder="e.g. Ujjain / Indore Airport / Vaishno Devi" required>
+                </div>
+
+                <div class="field-group">
+                  <label for="f-car">Preferred Indian Vehicle</label>
+                  <select id="f-car" name="Vehicle">
+                    <option value="Kia Carens (7-Seater Luxury MPV)">Kia Carens (7-Seater Luxury MPV)</option>
+                    <option value="Maruti Suzuki Ertiga (7-Seater Family MPV)">Maruti Suzuki Ertiga (7-Seater Family MPV)</option>
+                    <option value="Maruti Suzuki Swift Dzire (4+1 Executive Sedan)">Maruti Suzuki Swift Dzire (4+1 Executive Sedan)</option>
+                    <option value="Maruti Suzuki Eeco (7-Seater Utility Van)">Maruti Suzuki Eeco (7-Seater Utility Van)</option>
+                    <option value="Force Traveller (17-Seater Luxury Tempo Traveller)">Force Traveller (17-Seater Luxury Tempo Traveller)</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="f-date">Travel Date</label>
+                  <input type="date" id="f-date" name="Travel_Date">
+                </div>
+
+                <div class="field-group span-all">
+                  <label for="f-notes">Trip Requirements (Optional)</label>
+                  <textarea id="f-notes" name="Notes" rows="3" placeholder="Passenger count, number of days, or special instructions..."></textarea>
+                </div>
+
+                <div class="field-group">
+                  <button type="submit" class="btn btn-navy" style="width: 100%; padding: 13px;">Submit Enquiry</button>
+                </div>
+
+                <div class="field-group">
+                  <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20a%20cab%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width: 100%; padding: 13px;">Book Directly on WhatsApp</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXECUTIVE FOOTER
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h4>Seth Sanvariya Tour And Travels</h4>
+            <p style="margin-bottom: 10px;">
+              आपकी यात्रा, हमारी जिम्मेदारी — Executive All India Permit car rentals, religious pilgrimage yatras, and wedding luxury fleets in Shujalpur Mandi, District Shajapur (M.P.), India.
+            </p>
+            <p style="color: var(--gold-400); font-weight: 700;">॥ जय श्री सांवरिया सेठ ॥</p>
+          </div>
+
+          <div>
+            <h4>Navigation</h4>
+            <ul>
+              <li><label for="page-home" class="footer-nav">Home</label></li>
+              <li><label for="page-fleet" class="footer-nav">Our Fleet</label></li>
+              <li><label for="page-packages" class="footer-nav">Tour Packages</label></li>
+              <li><label for="page-services" class="footer-nav">Services</label></li>
+              <li><label for="page-contact" class="footer-nav">Contact &amp; Booking</label></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Our 5-Vehicle Fleet</h4>
+            <ul>
+              <li>Kia Carens (7-Seater Luxury MPV)</li>
+              <li>Maruti Suzuki Ertiga (7-Seater MPV)</li>
+              <li>Maruti Suzuki Swift Dzire (Sedan)</li>
+              <li>Maruti Suzuki Eeco (7-Seater Van)</li>
+              <li>Force Traveller (17-Seater Coach)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>24×7 Booking Desk</h4>
+            <p style="margin-bottom: 14px;">Shujalpur Mandi, District Shajapur, Madhya Pradesh (M.P.)</p>
+            <a href="tel:+918200423791" class="btn btn-gold btn-sm">Call +91 82004 23791</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Seth Sanvariya Tour And Travels, Shujalpur Mandi (M.P.). All Rights Reserved.</span>
+          <span>All India Permit • Experienced Drivers • 24×7 Service Available</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ========================================================================
+       PURE-CSS FLOATING WHATSAPP BUTTON & INTERACTIVE CHAT POPUP
+       ======================================================================== -->
+  <label for="wa-popup-toggle" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.475 1.331 4.988L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.453 9.969-9.969A9.914 9.914 0 0 0 19.08 4.91 9.908 9.908 0 0 0 12.031 2zm5.814 14.262c-.246.693-1.434 1.326-1.992 1.409-.513.077-1.162.109-1.875-.118-.434-.138-.99-.322-1.703-.63-2.997-1.294-4.954-4.312-5.104-4.512-.149-.2-1.219-1.622-1.219-3.094 0-1.472.771-2.196 1.045-2.495.274-.299.598-.374.797-.374.199 0 .399.002.573.01.184.009.43-.07.673.514.249.599.847 2.071.922 2.221.075.15.125.324.025.524-.1.2-.15.324-.299.499-.15.175-.315.39-.449.524-.15.15-.306.312-.131.612.174.299.775 1.279 1.664 2.071 1.144 1.02 2.108 1.336 2.407 1.486.299.15.474.125.648-.075.175-.2.748-.873.947-1.172.2-.299.399-.249.673-.15.274.1 1.745.823 2.044.973.299.15.499.224.573.349.075.125.075.723-.171 1.416z"/>
+    </svg>
+    <span>WhatsApp</span>
+    <span class="wa-pulse" aria-hidden="true"></span>
+  </label>
+
+  <div class="wa-popup" role="dialog" aria-label="Seth Sanvariya WhatsApp Chat">
+    <div class="wa-head">
+      <div class="wa-profile">
+        <div class="wa-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.475 1.331 4.988L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.453 9.969-9.969A9.914 9.914 0 0 0 19.08 4.91 9.908 9.908 0 0 0 12.031 2z"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Seth Sanvariya Tour And Travels</h4>
+          <div class="wa-status">
+            <span></span> Online | Replies Instantly
+          </div>
+        </div>
+      </div>
+      <label for="wa-popup-toggle" class="close-btn" title="Close">×</label>
+    </div>
+
+    <div class="wa-body">
+      <div class="wa-bubble">
+        ॥ जय श्री सांवरिया सेठ ॥ 🙏<br>
+        Welcome to <strong>Seth Sanvariya Tour And Travels, Shujalpur Mandi</strong>. Select a topic below for instant WhatsApp rates &amp; availability:
+        <small>Shujalpur Mandi • +91 82004 23791</small>
+      </div>
+
+      <div class="wa-label">Quick WhatsApp Topics</div>
+
+      <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20need%20a%20Local%20/%20Outstation%20Taxi%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="wa-quick-item">
+        <span>1. Local / Outstation Taxi Booking</span>
+        <span>→</span>
+      </a>
+
+      <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20please%20share%20details%20for%20the%2010-Stop%20Malwa%20%26%20Narmada%20Darshan%20Yatra." target="_blank" rel="noopener noreferrer" class="wa-quick-item">
+        <span>2. Malwa &amp; Narmada Darshan Yatra</span>
+        <span>→</span>
+      </a>
+
+      <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20please%20share%20details%20for%20Vaishno%20Devi%20%26%20Himachal%20Shaktipeeth%20Yatra." target="_blank" rel="noopener noreferrer" class="wa-quick-item">
+        <span>3. Vaishno Devi &amp; Himachal Yatra</span>
+        <span>→</span>
+      </a>
+
+      <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20a%20vehicle%20for%20Wedding%20/%20Ujjain%20Mahakal%20/%20Dwarka." target="_blank" rel="noopener noreferrer" class="wa-quick-item">
+        <span>4. Wedding Car / Mahakal &amp; Dwarka Tour</span>
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="wa-foot">
+      <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20cab%20booking." target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width: 100%;">
+        Chat on WhatsApp (+91 82004 23791)
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PURE-CSS QUICK CAB BOOKING MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Quick Cab Booking">
+    <div class="modal-dialog">
+      <div class="modal-top">
+        <div>
+          <h3>Quick Cab &amp; Yatra Booking</h3>
+          <p>Seth Sanvariya Tour And Travels • Shujalpur Mandi (M.P.)</p>
+        </div>
+        <label for="quick-book-toggle" class="close-btn" title="Close">×</label>
+      </div>
+
+      <div class="modal-content">
+        <form action="mailto:bookings@sethsanvariyatravels.in" method="post" enctype="text/plain">
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="m-name">Your Name *</label>
+              <input type="text" id="m-name" name="Name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="field-group">
+              <label for="m-phone">Phone / WhatsApp *</label>
+              <input type="tel" id="m-phone" name="Phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+
+            <div class="field-group">
+              <label for="m-vehicle">Select Vehicle *</label>
+              <select id="m-vehicle" name="Vehicle">
+                <option value="Kia Carens (7-Seater Luxury MPV)">Kia Carens (7-Seater Luxury MPV)</option>
+                <option value="Maruti Suzuki Ertiga (7-Seater Family MPV)">Maruti Suzuki Ertiga (7-Seater Family MPV)</option>
+                <option value="Maruti Suzuki Swift Dzire (4+1 Executive Sedan)">Maruti Suzuki Swift Dzire (4+1 Executive Sedan)</option>
+                <option value="Maruti Suzuki Eeco (7-Seater Utility Van)">Maruti Suzuki Eeco (7-Seater Utility Van)</option>
+                <option value="Force Traveller (17-Seater Luxury Tempo Traveller)">Force Traveller (17-Seater Luxury Tempo Traveller)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="m-date">Travel Date</label>
+              <input type="date" id="m-date" name="Date">
+            </div>
+
+            <div class="field-group span-all">
+              <label for="m-route">Pickup &amp; Destination *</label>
+              <input type="text" id="m-route" name="Route" placeholder="e.g. Shujalpur Mandi to Ujjain / Indore Airport" required>
+            </div>
+
+            <div class="field-group span-all">
+              <button type="submit" class="btn btn-navy" style="width: 100%; padding: 12px;">Submit Quick Enquiry</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="modal-footer-btns">
+          <a href="tel:+918200423791" class="btn btn-gold btn-sm">Call +91 82004 23791</a>
+          <a href="https://wa.me/918200423791?text=Namaste%20Seth%20Sanvariya%20Tour%20And%20Travels,%20I%20want%20to%20book%20a%20cab%20from%20Shujalpur%20Mandi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm">WhatsApp +91 82004 23791</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
